@@ -25,6 +25,7 @@ nav {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 10px;
+
 }
 
 .actualHeroImage {
@@ -38,7 +39,7 @@ nav {
 
 .heroTextAndButton {
     position: absolute;
-    inset: 0;
+    inset: 0 ;
 }
 
 
@@ -111,3 +112,21 @@ nav {
     padding: 10px;
 }
 
+#sectionFooter {
+    background-color: burlywood;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+
+.footerLinks {
+    display: flex;
+    gap: 10px;
+}
