@@ -1,13 +1,19 @@
+h1 {
+    font-size: 50px;
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: auto;
+    background-color: #d5e8ff
+
 }
 
 
 #sectionNav {
-    background-color: aqua;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+    /*padding-bottom: 20px;*/
+
 }
 
 nav {
@@ -21,11 +27,7 @@ nav {
 }
 
 #sectionHero {
-    background-color: burlywood;
-    padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 10px;
-
 }
 
 .actualHeroImage {
@@ -37,22 +39,24 @@ nav {
     position: relative;
 }
 
+.heroButton {
+    font-size: 40px;
+}
+
 .heroTextAndButton {
     position: absolute;
-    inset: 0 ;
+    bottom: 40px;
+    left: 40px;
 }
 
 
 #sectionClients {
-    background-color: aqua;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+    padding: 40px;
 }
 
 .img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 .client {
@@ -63,7 +67,7 @@ nav {
 }
 
 #sectionService {
-    background-color: burlywood;
+    background-color: lightcyan;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 10px;
@@ -82,19 +86,16 @@ nav {
 }
 
 #sectionContact {
-    background-color: aqua;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 10px;
 }
 
 .leftImg {
-    background-color: darkred;
+border-right: black solid 1px;
 }
 
 .rightCont {
-    background-color: chartreuse;
-
     width: 100%;
 }
 
