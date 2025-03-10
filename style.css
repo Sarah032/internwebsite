@@ -99,6 +99,11 @@ border-right: black solid 1px;
     width: 100%;
 }
 
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .contactImage {
     width: 100%;
