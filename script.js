@@ -2,7 +2,7 @@
 
 
 (function() {
-    emailjs.init("YOR_PUBLIC_KEY");
+    emailjs.init("oCKke-YDU37OW8j8V");
 })();
 
 const form = document.getElementById("form")
@@ -21,7 +21,7 @@ const templateParams = {
 
 function validateForm() {
     isValid = form.checkValidity()
-
+s
     if (isValid === false) {
         message.textContent = "Fill the fields!"
         message.style.color = "red"
@@ -39,7 +39,7 @@ function processFormData(e) {
     validateForm()
 
     if(isValid === true) {
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_hd9lhgc', 'template_717td5r', templateParams)
             .then(function(response){
                 message.textContent ="Thank you very much we will reply to you as soon as possible";
                 message.style.color = 'green';
