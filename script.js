@@ -1,24 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the contact form element
-    const form = document.getElementById('contactForm');
-
-    // Add event listener for form submission
-    form.addEventListener('submit', function(event) {
-        // Prevent the default form submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
+        const params = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        submitButton.innerHTML = 'Sending...';
+        submitButton.disabled = true;
 
-        // Get values from form fields
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // Log the values to the console
-        console.log('Form Submission:');
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
-
-        // Optional: Reset the form after logging
-        form.reset();
+        emailjs.send("service_9nf2jgn", "template_717td5r", params)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                console.log('Your message has been sent successfully!');
+                contactForm.reset();
+            })
+            .catch(function(error) {
+                console.log('FAILED...', error);
+                console.log('Failed to send the message. Please try again later.');
+            })
+            .finally(function() {
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            });
     });
 });

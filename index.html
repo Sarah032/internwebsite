@@ -7,8 +7,16 @@
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "oCKke-YDU37OW8j8V",
+            });
+        })();
+    </script>
+
     <script src="script.js"></script>
-    <title>Navigation Example</title>
+    <title>Intern Website</title>
 </head>
 <body>
 <section id="sectionNav">
@@ -68,7 +76,6 @@
         <div class="leftImg">
             <img alt="hero" class="contactImage" src="images/contact.webp"/>
         </div>
-
         <div class="rightCont">
             <h2></h2>
             <div class="form"></div>
@@ -76,43 +83,35 @@
                 <label>Name</label>
                 <label for="name"></label>
                 <input type="text" id="name" name="name" placeholder="name..." required>
-
                 <label>Email</label>
                 <label for="email"></label>
                 <input type="text" id="email" name="email" placeholder="email@adress.com" required>
-
                 <label>Message</label>
                 <label for="message"></label>
                 <textarea name="message" id="message" required placeholder="Your message..."></textarea>
-                <button type="submit" value="Send">Send</button>
+                <button type="submit">Send</button>
             </form>
         </div>
     </div>
 </section>
 
 
-<section id="sectionFooter">
-  <div class="footer">
-
-    <div >
-        <p>@ all rights reserved</p>
-    </div> 
-
-       <div class="footerLinks">
-        <p>HOME</p>
-        <p>ABOUT</p>
-        <p>TESTIMONIALS</p>
-        <p>CONTACT US</p>
-       </div>
-
-  </div> 
-
-</section>
-
-
 
 </body>
 <footer>
+    <section id="sectionFooter">
+        <div class="footer">
+            <div >
+                <p>@ all rights reserved</p>
+            </div>
+            <div class="footerLinks">
+                <p>HOME</p>
+                <p>ABOUT</p>
+                <p>TESTIMONIALS</p>
+                <p>CONTACT US</p>
+            </div>
+        </div>
+    </section>
 
 </footer>
 </html>
