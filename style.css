@@ -1,138 +1,533 @@
-h1 {
-    font-size: 50px;
+/* ===================
+   Global Styles
+=================== */
+:root {
+    --primary: #0A66C2;
+    --primary-dark: #084d9b;
+    --accent: #ff7a00;
+    --light-bg: #f4f7fa;
+    --footer-bg: #f5deb3;
+    --text-light: #d0d8f0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    width: auto;
-    background-color: #d5e8ff
-
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: #333;
 }
 
-
-#sectionNav {
-    /*padding-bottom: 20px;*/
-
-}
-
+/* ===================
+   Navigation
+=================== */
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: lightgrey;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding-left: 10px;
-    padding-right: 10px;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--accent);
+    padding: 20px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    border-bottom: black solid 1px;
 }
 
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.navItems {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logoText {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: black;
+}
+
+nav p:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* ===================
+   Hero Section
+=================== */
 #sectionHero {
-    padding-bottom: 20px;
-}
-
-.actualHeroImage {
-    width: 100%;
-    height: 600px;
+    background-color: #0e193e;
+    position: relative;
 }
 
 .heroImage {
     position: relative;
 }
 
-.heroButton {
-    font-size: 40px;
+.actualHeroImage {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 
-.heroTextAndButton {
+.heroOverlayContent {
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.heroOverlayContent h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.orange {
+    color: var(--accent);
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.trust {
+    font-size: 20px;
+    margin: 20px 0 10px;
+}
+
+.heroButton {
+    padding: 12px 30px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.heroButton:hover {
+    background-color: var(--primary-dark);
 }
 
 
-#sectionClients {
-    padding: 40px;
+
+/* ===================
+   Clients Section
+=================== */
+.client {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 10px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.heroComp {
+    height: 200px;
+    width: 200px;
+}
+
+.client {
+    background-color: var(--light-bg);
+    border-bottom: black solid 1px;
 }
 
 .img {
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 
-.client {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+/* ===================
+   Services Section
+=================== */
+
+.custom-card {
+    width: 380px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: 'Inter', sans-serif;
 }
 
-#sectionService {
-    background-color: lightcyan;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+.custom-card-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
 }
 
-.services {
-    display: flex;
-    justify-content: space-between;
-}
-
-.serviceCards {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#sectionContact {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-}
-
-.leftImg {
-border-right: black solid 1px;
-}
-
-.rightCont {
+.custom-card-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.contactForm {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.contactImage {
-    width: 100%;
+.custom-card-body {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    padding: 20px;
     height: 100%;
 }
 
-.container {
+.custom-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.custom-card-body p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.custom-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.custom-card-button {
+    background-color: var(--accent, #ff7a00);
+    color: var(--black, #000);
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-card-button:hover {
+    background-color: #e06600;
+}
+
+
+#sectionService {
+    background-color: #e6f7ff;
+    padding: 40px 20px;
+}
+
+.services {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.serviceCards {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.serviceCards:hover {
+    transform: translateY(-5px);
+}
+
+/* ===================
+   Contact Section
+=================== */
+
+.contact_us * {
+    font-family: Nunito, sans-serif;
+}
+
+.contact_us a {
+    text-decoration-line: none;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
+
+.contact_us .text-blk {
+    margin: 0;
+    line-height: 25px;
+    padding: 0;
+}
+
+.contact_us input:focus {
+    outline: initial none initial;
+}
+
+.contact_us textarea:focus {
+    outline: initial none initial;
+}
+
+.contact_us .responsive-cell-block {
+    min-height: 75px;
+}
+
+.contact_us .responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+.contact_us .responsive-container-block.bigContainer {
+    padding: 10px 30px;
+}
+
+.contact_us .responsive-container-block.Container {
+    max-width: 1320px;
+    margin: 50px auto;
+}
+
+.contact_us .mainImg {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.contact_us .responsive-cell-block.wk-desk-7.wk-ipadp-8.wk-tab-12.wk-mobile-12 {
+    background-color: #333333;
+    padding: 30px 50px;
+}
+
+.contact_us .text-blk.heading {
+    color: white;
+    font-size: 35px;
+    line-height: 48px;
+    font-weight: 800;
+    margin: 0 0 30px;
+}
+
+.contact_us #message {
+    width: 100%;
+    margin: 0;
     padding: 10px;
 }
 
-#sectionFooter {
-    background-color: burlywood;
+.contact_us .emailArea {
+    width: 49%;
+}
+
+.contact_us .firstRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 30px;
+    width: 100%;
+}
+
+.contact_us .fullNameArea {
+    width: 49%;
+}
+
+.contact_us .cardHead {
+    margin: 0 0 10px;
+    color: white;
+}
+
+.contact_us .submit {
+    color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: #00b2eb;
+    border-radius: 10px;
+}
+
+.contact_us .formTable {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact_us .messageArea {
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.contact_us .fullName {
+    width: 100%;
+    padding: 10px;
+}
+
+.contact_us .email {
+    width: 100%;
+    padding: 10px;
+}
+
+@media (max-width: 1024px) {
+    .contact_us .firstRow {
+        flex-direction: column;
+    }
+
+    .contact_us .fullNameArea {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+
+    .contact_us .emailArea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact_us .responsive-container-block.bigContainer {
+        padding: 10px 20px;
+    }
+
+    .contact_us .responsive-container-block.Container {
+        padding: 0;
+    }
+
+    .contact_us .responsive-cell-block.wk-desk-7.wk-ipadp-8.wk-tab-12.wk-mobile-12 {
+        padding: 10px;
+    }
+}
+
+/* ===================
+   Subscribe Section
+=================== */
+#sectionSubscribe {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.subscribe h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+#subscribeForm {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#subscribeForm input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    width: 250px;
+}
+
+#subscribeForm button {
+    background-color: var(--accent);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#subscribeForm button:hover {
+    background-color: #e06600;
+}
+
+/* ===================
+   Footer Section
+=================== */
+#sectionFooter {
+    background-color: var(--footer-bg);
+    padding: 20px;
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
-
+    align-items: center;
+    padding: 5px 20px;
+    flex-wrap: wrap;
 }
 
 .footerLinks {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.footerLinks p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ===================
+   Responsive Styles
+=================== */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .client {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .heroOverlayContent {
+        left: 20px;
+        right: 20px;
+        max-width: 100%;
+    }
+
+    .heroOverlayContent h1 {
+        font-size: 32px;
+    }
+
+    .orange {
+        font-size: 40px;
+    }
+
+    .actualHeroImage {
+        display: none;
+    }
+
+    .heroButton {
+        font-size: 16px;
+    }
 }

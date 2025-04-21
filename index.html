@@ -1,108 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="style.css" rel="stylesheet"/>
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init({
-                publicKey: "oCKke-YDU37OW8j8V",
-            });
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anjowa Auto Mobile</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init({ publicKey: "oCKke-YDU37OW8j8V" });
         })();
     </script>
-
-    <script src="script.js"></script>
-    <title>Intern Website</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
-<section id="sectionNav">
+
+<header id="sectionNav">
     <nav>
+<div class="logoText">
+            <img alt="hero" class="logo" src="images/logo.svg" />
+    <h2>Anjowa Auto Mobile</h2>
+</div>
+        <div class="navItems">
         <p>HOME</p>
         <p>ABOUT</p>
         <p>TESTIMONIALS</p>
         <p>CONTACT US</p>
+        </div>
+
+
     </nav>
-</section>
+</header>
 
 <section id="sectionHero">
     <div class="heroImage">
-        <img alt="hero" class="actualHeroImage" src="images/hero.webp"/>
-        <div class="heroTextAndButton">
-            <h1>Building digital</h1>
-            <button class="heroButton">learn more</button>
+        <img alt="hero" class="actualHeroImage" src="images/hero/heroMain.svg" />
+        <div class="heroOverlayContent">
+            <h1>
+                <span class="highlight">Car Repair</span><br />
+                <span class="orange">Service</span>
+            </h1>
+            <p class="subtitle">We are your trusted choice for expert car repairs and maintenance.</p>
+            <h2 class="trust">Building Trust</h2>
+            <button class="heroButton">LEARN MORE..</button>
         </div>
     </div>
 </section>
 
 <section id="sectionClients">
     <div class="client">
-        <img alt="hero" class="img" src="images/logo1.svg"/>
-        <img alt="hero" class="img" src="images/logo2.svg"/>
-        <img alt="hero" class="img" src="images/logo3.svg"/>
+        <img alt="logo1" class="heroComp" src="images/clients/comp1.svg" />
+        <img alt="logo2" class="heroComp" src="images/clients/comp2.svg" />
+        <img alt="logo3" class="heroComp" src="images/clients/comp3.svg" />
+        <img alt="logo3" class="heroComp" src="images/clients/comp4.svg" />
     </div>
 </section>
 
 <section id="sectionService">
     <div class="services">
-        <div class="serviceCards">
-            <img alt="hero" class="img" src="images/icon1.svg"/>
-            <h3>UX & UI</h3>
-            <p>Design amazing interfaces and diagrams</p>
+        <div class="custom-card">
+            <div class="custom-card-image">
+                <img src="images/services/ed.svg" alt="Shoes" />
+            </div>
+            <div class="custom-card-body">
+                <h2 class="custom-card-title">Engine Diagnostics</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="custom-card-actions">
+                    <button class="custom-card-button">More info</button>
+                </div>
+            </div>
         </div>
-        <div class="serviceCards">
-            <img alt="hero" class="img" src="images/icon2.svg"/>
-            <h3>UX & UI</h3>
-            <p>Design amazing interfaces and diagrams</p>
+
+        <div class="custom-card">
+            <div class="custom-card-image">
+                <img src="images/services/wt.svg" alt="Shoes" />
+            </div>
+            <div class="custom-card-body">
+                <h2 class="custom-card-title">Wheel & Tire Service</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="custom-card-actions">
+                    <button class="custom-card-button">More info</button>
+                </div>
+            </div>
         </div>
-        <div class="serviceCards">
-            <img alt="hero" class="img" src="images/icon3.svg"/>
-            <h3>UX & UI</h3>
-            <p>Design amazing interfaces and diagrams</p>
+
+        <div class="custom-card">
+            <div class="custom-card-image">
+                <img src="images/services/br.svg" alt="Shoes" />
+            </div>
+            <div class="custom-card-body">
+                <h2 class="custom-card-title">Body Repair</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="custom-card-actions">
+                    <button class="custom-card-button">More info</button>
+                </div>
+            </div>
         </div>
-        <div class="serviceCards">
-            <img alt="hero" class="img" src="images/icon4.svg"/>
-            <h3>UX & UI</h3>
-            <p>Design amazing interfaces and diagrams</p>
+
+        <div class="custom-card">
+            <div class="custom-card-image">
+                <img src="images/services/eld.svg" alt="Shoes" />
+            </div>
+            <div class="custom-card-body">
+                <h2 class="custom-card-title">Electric Diagnostics</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="custom-card-actions">
+                    <button class="custom-card-button">More info</button>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
 
 <section id="sectionContact">
     <div class="container">
         <div class="leftImg">
-            <img alt="hero" class="contactImage" src="images/contact.webp"/>
+            <img alt="contact" class="contactImage" src="images/contact.webp" />
         </div>
         <div class="rightCont">
-            <h2></h2>
-            <div class="form"></div>
+            <h2>Contact Us</h2>
             <form id="contactForm">
-                <label>Name</label>
-                <label for="name"></label>
-                <input type="text" id="name" name="name" placeholder="name..." required>
-                <label>Email</label>
-                <label for="email"></label>
-                <input type="text" id="email" name="email" placeholder="email@adress.com" required>
-                <label>Message</label>
-                <label for="message"></label>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..." required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+                <label for="message">Message</label>
                 <textarea name="message" id="message" required placeholder="Your message..."></textarea>
+
                 <button type="submit">Send</button>
             </form>
         </div>
     </div>
 </section>
 
+<section id="sectionSubscribe">
+    <div class="subscribe">
+        <h2>Subscribe to our newsletter</h2>
+        <form id="subscribeForm">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
 
-
-</body>
 <footer>
     <section id="sectionFooter">
         <div class="footer">
-            <div >
-                <p>@ all rights reserved</p>
+            <div>
+                <p>© All rights reserved</p>
             </div>
             <div class="footerLinks">
                 <p>HOME</p>
@@ -112,6 +161,7 @@
             </div>
         </div>
     </section>
-
 </footer>
+
+</body>
 </html>
