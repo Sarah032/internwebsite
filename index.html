@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Anjowa Auto Mobile</title>
-    <link href="style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init({ publicKey: "oCKke-YDU37OW8j8V" });
+            emailjs.init({publicKey: "oCKke-YDU37OW8j8V"});
         })();
     </script>
     <script defer src="script.js"></script>
@@ -18,15 +18,15 @@
 
 <header id="sectionNav">
     <nav>
-<div class="logoText">
-            <img alt="hero" class="logo" src="images/logo.svg" />
-    <h2>Anjowa Auto Mobile</h2>
-</div>
+        <div class="logoText">
+            <img alt="hero" class="logo" src="images/logo.svg"/>
+            <h2>Anjowa Auto Mobile</h2>
+        </div>
         <div class="navItems">
-        <p>HOME</p>
-        <p>ABOUT</p>
-        <p>TESTIMONIALS</p>
-        <p>CONTACT US</p>
+            <p>HOME</p>
+            <p>ABOUT</p>
+            <p>TESTIMONIALS</p>
+            <p>CONTACT US</p>
         </div>
 
 
@@ -35,10 +35,10 @@
 
 <section id="sectionHero">
     <div class="heroImage">
-        <img alt="hero" class="actualHeroImage" src="images/hero/heroMain.svg" />
+        <img alt="hero" class="actualHeroImage" src="images/hero/heroMain.svg"/>
         <div class="heroOverlayContent">
             <h1>
-                <span class="highlight">Car Repair</span><br />
+                <span class="highlight">Car Repair</span><br/>
                 <span class="orange">Service</span>
             </h1>
             <p class="subtitle">We are your trusted choice for expert car repairs and maintenance.</p>
@@ -50,10 +50,10 @@
 
 <section id="sectionClients">
     <div class="client">
-        <img alt="logo1" class="heroComp" src="images/clients/comp1.svg" />
-        <img alt="logo2" class="heroComp" src="images/clients/comp2.svg" />
-        <img alt="logo3" class="heroComp" src="images/clients/comp3.svg" />
-        <img alt="logo3" class="heroComp" src="images/clients/comp4.svg" />
+        <img alt="logo1" class="heroComp" src="images/clients/comp1.svg"/>
+        <img alt="logo2" class="heroComp" src="images/clients/comp2.svg"/>
+        <img alt="logo3" class="heroComp" src="images/clients/comp3.svg"/>
+        <img alt="logo3" class="heroComp" src="images/clients/comp4.svg"/>
     </div>
 </section>
 
@@ -61,7 +61,7 @@
     <div class="services">
         <div class="custom-card">
             <div class="custom-card-image">
-                <img src="images/services/ed.svg" alt="Shoes" />
+                <img src="images/services/ed.svg" alt="Shoes"/>
             </div>
             <div class="custom-card-body">
                 <h2 class="custom-card-title">Engine Diagnostics</h2>
@@ -74,7 +74,7 @@
 
         <div class="custom-card">
             <div class="custom-card-image">
-                <img src="images/services/wt.svg" alt="Shoes" />
+                <img src="images/services/wt.svg" alt="Shoes"/>
             </div>
             <div class="custom-card-body">
                 <h2 class="custom-card-title">Wheel & Tire Service</h2>
@@ -87,7 +87,7 @@
 
         <div class="custom-card">
             <div class="custom-card-image">
-                <img src="images/services/br.svg" alt="Shoes" />
+                <img src="images/services/br.svg" alt="Shoes"/>
             </div>
             <div class="custom-card-body">
                 <h2 class="custom-card-title">Body Repair</h2>
@@ -100,7 +100,7 @@
 
         <div class="custom-card">
             <div class="custom-card-image">
-                <img src="images/services/eld.svg" alt="Shoes" />
+                <img src="images/services/eld.svg" alt="Shoes"/>
             </div>
             <div class="custom-card-body">
                 <h2 class="custom-card-title">Electric Diagnostics</h2>
@@ -117,20 +117,20 @@
 <section id="sectionContact">
     <div class="container">
         <div class="leftImg">
-            <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp35.svg">
-
+            <img class="mainImg" src="images/contact/conImg.svg"
+                 alt="Contact Illustration">
         </div>
         <div class="rightCont">
-            <h2>Contact Us</h2>
+            <h2 class="contactText">Contact Us</h2>
             <form id="contactForm">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name..." required />
+                <input type="text" id="name" name="name" placeholder="Your name..." required/>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <input type="email" id="email" name="email" placeholder="you@example.com" required/>
 
                 <label for="message">Message</label>
-                <textarea name="message" id="message" required placeholder="Your message..."></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
 
                 <button type="submit">Send</button>
             </form>
@@ -142,7 +142,7 @@
     <div class="subscribe">
         <h2>Subscribe to our newsletter</h2>
         <form id="subscribeForm">
-            <input type="email" placeholder="Enter your email" required />
+            <input class="emailInput" type="email" placeholder="Enter your email" required/>
             <button type="submit">Subscribe</button>
         </form>
     </div>
@@ -151,8 +151,14 @@
 <footer>
     <section id="sectionFooter">
         <div class="footer">
-            <div>
-                <p>© All rights reserved</p>
+            <div class="footerLogo">
+                <img alt="hero" class="logo" src="images/logo.svg"/>
+                <p>©
+                    <script>document.write(new Date().getFullYear());</script>
+                    All rights reserved!
+
+                </p>
+
             </div>
             <div class="footerLinks">
                 <p>HOME</p>
