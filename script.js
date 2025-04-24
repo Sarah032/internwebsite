@@ -28,5 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 submitButton.innerHTML = originalButtonText;
                 submitButton.disabled = false;
             });
+
+            
     });
+    
+
 });

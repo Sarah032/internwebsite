@@ -67,10 +67,26 @@
                 <h2 class="custom-card-title">Engine Diagnostics</h2>
                 <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                 <div class="custom-card-actions">
-                    <button class="custom-card-button">More info</button>
+                    <button class="custom-card-button" onclick="showMoreInfo('infoModal')">More info</button>
                 </div>
             </div>
         </div>
+          
+    <div id="infoModal" class="info-modal">
+    <div class="modal-content">
+     <span class="close-button" onclick="closeModal('infoModal')">&times;</span>
+      <h2>Engine Diagnostics Details</h2>
+      <p>Our Engine Diagnostics service includes:</p>
+        <ul>
+          <li>Comprehensive computer diagnostics</li>
+          <li>Error code interpretation</li>
+          <li>Performance analysis</li>
+          <li>Recommended maintenance plans</li>
+          <li>Engine health report</li>
+        </ul>
+       <p>This service helps identify problems before they become major issues, saving you time and money in the long run.</p>
+     </div>
+    </div>
 
         <div class="custom-card">
             <div class="custom-card-image">
@@ -80,10 +96,26 @@
                 <h2 class="custom-card-title">Wheel & Tire Service</h2>
                 <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                 <div class="custom-card-actions">
-                    <button class="custom-card-button">More info</button>
+                    <button class="custom-card-button" onclick="showMoreInfo('infoModalWheel')">More info</button>
                 </div>
             </div>
         </div>
+
+        <div id="infoModalWheel" class="info-modal">
+            <div class="modal-content">
+             <span class="close-button" onclick="closeModal('infoModalWheel')">&times;</span>
+              <h2>Wheel & Tire Service Details</h2>
+              <p>Wheel & Tire Service inlcudes;</p>
+                <ul>
+                    <li>Tire rotation and balancing</li>
+                    <li>Wheel alignment</li>
+                    <li>Puncture repair</li>
+                    <li>Rim and tire replacement</li>
+                    <li>Pressure checks</li>
+                </ul>
+                <p>Proper tire and wheel care enhances driving safety and extends tire life.</p>
+             </div>
+            </div>
 
         <div class="custom-card">
             <div class="custom-card-image">
@@ -93,25 +125,55 @@
                 <h2 class="custom-card-title">Body Repair</h2>
                 <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                 <div class="custom-card-actions">
-                    <button class="custom-card-button">More info</button>
+                    <button class="custom-card-button" onclick="showMoreInfo('modalBody')">More info</button>
                 </div>
             </div>
         </div>
 
-        <div class="custom-card">
+        <div id="modalBody" class="info-modal">
+            <div class="modal-content">
+              <span class="close-button" onclick="closeModal('modalBody')">&times;</span>
+              <h2>Body Repair Details</h2>
+              <ul>
+                <li>Dent and scratch removal</li>
+                <li>Panel replacement</li>
+                <li>Paint touch-up and matching</li>
+                <li>Collision repair</li>
+                <li>Frame straightening</li>
+              </ul>
+              <p>We restore your vehicle to its original condition with precision and care.</p>
+            </div>
+          </div>
+      
+
+          <div class="custom-card">
             <div class="custom-card-image">
-                <img src="images/services/eld.svg" alt="Shoes"/>
+              <img src="images/services/eld.svg" alt="Shoes" />
             </div>
             <div class="custom-card-body">
-                <h2 class="custom-card-title">Electric Diagnostics</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="custom-card-actions">
-                    <button class="custom-card-button">More info</button>
-                </div>
+              <h2 class="custom-card-title">Electric Diagnostics</h2>
+              <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div class="custom-card-actions">
+                <button class="custom-card-button" onclick="showMoreInfo('modalElectric')">More info</button>
+              </div>
             </div>
+          </div>
+      
+          <div id="modalElectric" class="info-modal">
+            <div class="modal-content">
+              <span class="close-button" onclick="closeModal('modalElectric')">&times;</span>
+              <h2>Electric Diagnostics Details</h2>
+              <ul>
+                <li>Battery testing</li>
+                <li>Alternator & starter checks</li>
+                <li>Wiring inspections</li>
+                <li>Fuse and relay diagnostics</li>
+                <li>Sensor analysis</li>
+              </ul>
+              <p>We ensure your vehicle's electrical system is functioning optimally for reliability and safety.</p>
+            </div>
+          </div>
         </div>
-
-    </div>
 </section>
 
 <section id="sectionContact">
@@ -169,6 +231,27 @@
         </div>
     </section>
 </footer>
+<script>
+    function showMoreInfo(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+  
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+      document.querySelectorAll('.info-modal').forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
+  
+  </body>
+  </html>
+  
 
 </body>
 </html>
